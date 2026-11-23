@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Peinados</title>
+    <title>Uñas - Mis Trabajos</title>
 </head>
 <body>
-     <header>
+    <header>
         <a href="index.html">
             <img src="logo minimalista.png" alt="Logo artista" class="logo">
         </a>
@@ -24,13 +24,34 @@
             </aside>
         </nav>
     </header>
+
     <main>
-        <h1>Peinados</h1>
-        <p>Explora nuestra galería de peinados personalizados y encuentra el estilo perfecto para ti. Nuestro artista talentoso está listo para transformar tus ideas en arte corporal único.</p>
-        <img src="peinado1.jpg" alt="Peinado 1">
-        <img src="peinado2.jpg" alt="Peinado 2">
-        <img src="peinado3.jpg" alt="Peinado 3">
+        <div class="galeria-header">
+            <h1>Mis Diseños de Uñas</h1>
+            <p>Ideas plasmadas de pinterest solicitadas por los clientes.</p>
+        </div>
+
+        <!-- Cuadrícula de la galería tipo tarjetitas -->
+        <section class="galeria-grid" id="galeria-uñas">
+        <!-- El script generará las tarjetas aquí automáticamente -->
+        </section>
+
+        <script>
+            const contenedor = document.getElementById('galeria-peinados');
+            const totalFotos = 16; // Cambia a 25 cuando hagas la de uñas
+
+            for (let i = 1; i <= totalFotos; i++) {
+                const tarjeta = document.createElement('div');
+                tarjeta.className = 'tarjeta';
+                
+                tarjeta.innerHTML = `
+                    <img src="peinados/peinado${i}.jpeg" alt="Peinado ${i}" loading="lazy">
+                `;
+                contenedor.appendChild(tarjeta);
+            }
+        </script>
     </main>
+
     <footer>
         <p>© 2026 Aficionada a tatuajes, manicura y peluquería.</p>
     </footer>
